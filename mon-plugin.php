@@ -1,5 +1,15 @@
 <?php
 
+add_action( 'plugins_loaded', 'myplugin_load_textdomain' );
+/**
+ * Load plugin textdomain.
+ *
+ * @since 1.0.0
+ */
+function myplugin_load_textdomain() {
+  load_plugin_textdomain( 'monplugi', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' ); 
+}
+
 /*
 Plugin Name: Mon Plugin
 Description: Mon 1er plugin
